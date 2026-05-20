@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado — SAEBTrack</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/simulado.css">
+</head>
+<body>
+  <div class="simulado-topbar">
+    <span class="questao-counter" id="counter">Questão 1 de 5</span>
+    <span class="timer" id="timer">⏱ 0:00</span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress" style="width:20%"></div>
+  </div>
+
+  <main class="simulado-container">
+    <div class="descritor-badge" id="descritor-badge">Descritor D15 — LP</div>
+
+    <div class="enunciado-card" id="enunciado">
+      <!-- preenchido pelo JS -->
+    </div>
+
+    <div class="alternativas" id="alternativas">
+      <!-- preenchido pelo JS -->
+    </div>
+
+    <button class="btn-proxima" id="btn-proxima" style="display:none"
+      onclick="proximaQuestao()">
+      Próxima Questão →
+    </button>
+  </main>
+
+  <script src="js/global.js"></script>
+  <script src="js/simulado.js"></script>
+</body>
+</html>
