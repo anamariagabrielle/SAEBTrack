@@ -51,7 +51,7 @@ function iniciarTimer() {
     segundos++;
     const min = Math.floor(segundos / 60).toString().padStart(2, "0");
     const sec = (segundos % 60).toString().padStart(2, "0");
-    document.getElementById("timer").textContent = `⏱ ${min}:${sec}`;
+    document.getElementById("timer-value").textContent = `${min}:${sec}`;
   }, 1000);
 }
 

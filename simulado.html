@@ -10,7 +10,10 @@
 <body>
   <div class="simulado-topbar">
     <span class="questao-counter" id="counter">Questão 1 de 5</span>
-    <span class="timer" id="timer">⏱ 0:00</span>
+    <span class="timer">
+      <i data-lucide="clock" class="icon icon-sm" aria-hidden="true"></i>
+      <span id="timer-value">0:00</span>
+    </span>
   </div>
   <div class="progress-bar">
     <div class="progress-fill" id="progress" style="width:20%"></div>
@@ -27,12 +30,14 @@
       <!-- preenchido pelo JS -->
     </div>
 
-    <button class="btn-proxima" id="btn-proxima" style="display:none"
+    <button class="btn-proxima btn-with-icon" id="btn-proxima" style="display:none"
       onclick="proximaQuestao()">
-      Próxima Questão →
+      Próxima Questão
+      <i data-lucide="arrow-right" class="icon icon-sm" aria-hidden="true"></i>
     </button>
   </main>
 
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="js/global.js"></script>
   <script src="js/simulado.js"></script>
 </body>
