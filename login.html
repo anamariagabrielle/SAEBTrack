@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — SAEBTrack</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="page-auth">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <i data-lucide="brain" class="icon icon-lg logo-icon" aria-hidden="true"></i>
+      <span class="logo-text">SAEBTrack</span>
+      <span id="perfil-badge" class="badge badge-green">Perfil: Aluno</span>
+    </div>
+
+    <h1 class="auth-title">Bem-vindo de volta!</h1>
+    <p class="auth-subtitle">Acesse sua conta para continuar estudando.</p>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label" for="email">E-mail</label>
+        <div class="form-input-wrapper">
+          <i data-lucide="mail" class="icon icon-sm input-icon" aria-hidden="true"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu.email@escola.edu.br"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="senha">
+          Senha
+          <a href="#" class="form-link">Esqueci minha senha</a>
+        </label>
+        <div class="form-input-wrapper">
+          <i data-lucide="lock" class="icon icon-sm input-icon" aria-hidden="true"></i>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="••••••••"
+            required
+          >
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary">→ Entrar</button>
+    </form>
+
+    <p class="auth-footer">
+      Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+    </p>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/global.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const perfil = params.get('perfil') || 'aluno';
+      const badge = document.getElementById('perfil-badge');
+      const isProfessor = perfil === 'professor';
+
+      if (isProfessor) {
+        badge.textContent = 'Perfil: Professor';
+        badge.className = 'badge badge-yellow';
+        document.querySelector('.auth-subtitle').textContent =
+          'Acesse sua conta para gerenciar suas turmas.';
+      } else {
+        badge.textContent = 'Perfil: Aluno';
+        badge.className = 'badge badge-green';
+      }
+
+      document.getElementById('login-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (isProfessor) {
+          window.location.href = 'painel-professor.html';
+        } else {
+          window.location.href = 'dashboard.html';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

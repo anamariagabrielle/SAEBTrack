@@ -1,0 +1,358 @@
+/* ——— Seleção de perfil ——— */
+
+.page-selection {
+  background: radial-gradient(ellipse at center, #1a2a1a 0%, var(--bg-primary) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 48px;
+  padding: 40px;
+}
+
+.selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.selection-logo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.selection-logo .logo-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--color-green);
+}
+
+.selection-logo .logo-text {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-green);
+}
+
+.selection-logo .logo-badge {
+  margin-top: 4px;
+}
+
+.selection-logo .logo-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.profile-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.profile-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+}
+
+.card-icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-box .icon {
+  width: 40px;
+  height: 40px;
+}
+
+.card-icon-box.green .icon {
+  color: var(--color-green);
+}
+
+.card-icon-box.yellow .icon {
+  color: var(--color-yellow);
+}
+
+.card-icon-box.green {
+  background: #0d2a1a;
+}
+
+.card-icon-box.yellow {
+  background: #2a1e0d;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.card-subtitle {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.card-link {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.card-link.green {
+  color: var(--color-green);
+}
+
+.card-link.yellow {
+  color: var(--color-yellow);
+}
+
+.selection-footer {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ——— Login / Auth ——— */
+
+.page-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 40px;
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.auth-logo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-logo .logo-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--color-green);
+}
+
+.auth-logo .logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-green);
+}
+
+.auth-title {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.auth-subtitle {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-link {
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-link:hover {
+  color: var(--color-green);
+}
+
+.form-input-wrapper {
+  position: relative;
+}
+
+.form-input-wrapper .input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.form-input-wrapper input,
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: #0b1120;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-input-wrapper input {
+  padding: 14px 14px 14px 42px;
+}
+
+.form-input-wrapper input::placeholder,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-gray);
+}
+
+.form-input-wrapper input:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-green);
+}
+
+.auth-footer {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: var(--color-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ——— Cadastro ——— */
+
+.cadastro-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.perfil-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.toggle-btn {
+  background: #0b1120;
+  border: 1px solid #2a3a4a;
+  border-radius: var(--border-radius-sm);
+  padding: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.toggle-btn.active {
+  border-color: var(--color-green);
+  color: var(--text-primary);
+}
+
+.toggle-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.toggle-dot.active {
+  background: var(--color-green);
+  border-color: var(--color-green);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238892a4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+@media (max-width: 540px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
