@@ -1,0 +1,206 @@
+.perfil-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.avatar-grande {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.avatar-grande.azul {
+  background: #2563eb;
+}
+
+.perfil-info {
+  flex: 1;
+}
+
+.perfil-nome {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.perfil-escola {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.perfil-badges {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge-turma {
+  background: #1a2035;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.badge-nivel {
+  background: #1a1030;
+  color: var(--color-purple);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-editar {
+  background: var(--bg-card-hover);
+  border: none;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: Inter, sans-serif;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon.azul {
+  color: #2563eb;
+}
+
+.stat-icon.roxo {
+  color: var(--color-purple);
+}
+
+.stat-icon.verde {
+  color: var(--color-green);
+}
+
+.stat-icon.laranja {
+  color: var(--color-yellow);
+}
+
+.stat-valor {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.conquistas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.conquistas-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.conquistas-grid-perfil {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.conquista-item {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.conquista-item.bloqueada {
+  opacity: 0.5;
+  filter: grayscale(0.8);
+}
+
+.conquista-icon-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.conquista-icon-perfil {
+  width: 36px;
+  height: 36px;
+  color: var(--color-green);
+}
+
+.conquista-item.bloqueada .conquista-icon-perfil {
+  color: var(--text-secondary);
+}
+
+.conquista-icon-wrap .cadeado {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.conquista-item .conquista-icon-perfil.icon-flame {
+  color: var(--color-yellow);
+}
+
+.conquista-item .conquista-icon-perfil.icon-crown {
+  color: var(--color-purple);
+}
+
+.conquista-nome {
+  font-weight: 700;
+}
+
+.conquista-desc {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
