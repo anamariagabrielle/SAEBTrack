@@ -16,7 +16,8 @@
 
 .level-icon {
   color: var(--color-purple);
-  font-size: 18px;
+  width: 22px;
+  height: 22px;
 }
 
 .level-name {
@@ -47,7 +48,10 @@
 }
 
 .btn-start-simulado {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
   background: var(--color-green);
   color: #0b0f1a;
@@ -95,8 +99,18 @@
   gap: 8px;
 }
 
-.conquista-card .conquista-emoji {
-  font-size: 32px;
+.conquista-card .conquista-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-green);
+}
+
+.conquista-card .conquista-icon.icon-flame {
+  color: var(--color-yellow);
+}
+
+.conquista-card .conquista-icon.icon-crown {
+  color: var(--color-purple);
 }
 
 .conquista-card .conquista-nome {
@@ -129,6 +143,10 @@
 }
 
 .toggle-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: transparent;
   border: none;
   border-radius: 8px;
@@ -192,26 +210,26 @@
   font-size: 14px;
 }
 
-.descritor-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.descritor-status-icon.dominado {
+  color: var(--color-green);
 }
 
-.descritor-dot.dominado {
-  background: var(--color-green);
+.descritor-status-icon.desenvolvimento {
+  color: var(--color-yellow);
 }
 
-.descritor-dot.desenvolvimento {
-  background: var(--color-yellow);
+.descritor-status-icon.critico {
+  color: var(--color-red);
 }
 
-.descritor-dot.critico {
-  background: var(--color-red);
+.descritor-status-icon.nao-avaliado {
+  color: var(--color-gray);
 }
 
-.descritor-dot.nao-avaliado {
-  background: var(--color-gray);
+.section-header .inline-icon-row {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .descritor-nome {

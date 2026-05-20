@@ -45,19 +45,20 @@ body {
 
 .navbar-logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2px;
   text-decoration: none;
-  color: var(--color-green);
-  font-weight: 800;
-  font-size: 18px;
+  flex-shrink: 0;
 }
 
-.navbar-logo .logo-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--color-green);
+.logo-img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar-logo .logo-img {
+  width: 110px;
+  max-height: 48px;
 }
 
 /* Lucide Icons */
@@ -91,6 +92,24 @@ body {
 .icon-xl {
   width: 40px;
   height: 40px;
+}
+
+.icon-xs {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.inline-icon-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .navbar-menu {
@@ -166,6 +185,10 @@ body {
   font-family: inherit;
   font-size: 15px;
   transition: opacity 0.2s, transform 0.2s;
+  width: 100%;
+}
+
+.btn-primary.btn-with-icon {
   width: 100%;
 }
 

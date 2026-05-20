@@ -27,16 +27,9 @@
   gap: 12px;
 }
 
-.selection-logo .logo-icon {
-  width: 56px;
-  height: 56px;
-  color: var(--color-green);
-}
-
-.selection-logo .logo-text {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--color-green);
+.selection-logo .logo-img {
+  width: 240px;
+  max-width: 100%;
 }
 
 .selection-logo .logo-badge {
@@ -117,6 +110,9 @@
 }
 
 .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -172,16 +168,9 @@
   gap: 8px;
 }
 
-.auth-logo .logo-icon {
-  width: 44px;
-  height: 44px;
-  color: var(--color-green);
-}
-
-.auth-logo .logo-text {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--color-green);
+.auth-logo .logo-img {
+  width: 200px;
+  max-width: 100%;
 }
 
 .auth-title {
@@ -250,7 +239,8 @@
   font-family: 'Inter', sans-serif;
 }
 
-.form-input-wrapper input {
+.form-input-wrapper input,
+.form-input-wrapper select {
   padding: 14px 14px 14px 42px;
 }
 

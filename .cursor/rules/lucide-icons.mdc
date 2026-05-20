@@ -1,0 +1,41 @@
+---
+description: Usar Lucide para todos os ícones do SAEBTrack
+globs: "**/*.{html,js,css}"
+alwaysApply: true
+---
+
+# Ícones — Lucide
+
+O SAEBTrack usa **[Lucide](https://lucide.dev)** como única biblioteca de ícones.
+
+## Padrão HTML
+
+```html
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/global.js"></script>
+
+<i data-lucide="nome-do-icone" class="icon icon-sm" aria-hidden="true"></i>
+```
+
+Tamanhos em `css/global.css`: `icon-xs`, `icon-sm`, `icon-md`, `icon-lg`, `icon-xl`.
+
+## Regras
+
+- **Não** usar emojis (⚡, ▶, ⭐) nem símbolos Unicode como ícone de UI.
+- **Não** adicionar outras bibliotecas de ícones (Font Awesome, Material Icons, etc.).
+- A **logo** do produto continua sendo `images/logo.png` (não substituir por ícone Lucide).
+- Toda página com ícones deve carregar o script Lucide + `js/global.js`.
+- Conteúdo inserido via `innerHTML` deve chamar `window.initLucideIcons()` após atualizar o DOM.
+
+## Botões e links com ícone
+
+```html
+<button class="btn-primary btn-with-icon">
+  Texto
+  <i data-lucide="log-in" class="icon icon-sm" aria-hidden="true"></i>
+</button>
+```
+
+## Referência
+
+Nomes dos ícones: https://lucide.dev/icons

@@ -10,8 +10,7 @@
 <body>
   <nav class="navbar">
     <a href="dashboard.html" class="navbar-logo">
-      <i data-lucide="brain" class="icon icon-md logo-icon" aria-hidden="true"></i>
-      SAEBTrack
+      <img src="images/logo.png" alt="SAEBTrack" class="logo-img">
     </a>
     <ul class="navbar-menu">
       <li>
@@ -53,7 +52,7 @@
     <!-- Banner de nível -->
     <div class="level-banner">
       <div class="level-info">
-        <span class="level-icon">⚡</span>
+        <i data-lucide="zap" class="icon level-icon" aria-hidden="true"></i>
         <span class="level-name">Desafiador</span>
       </div>
       <div class="xp-info">
@@ -67,28 +66,32 @@
 
     <!-- Botão iniciar -->
     <a href="simulado.html" class="btn-start-simulado">
-      ▶ INICIAR SIMULADO AGORA
+      <i data-lucide="play" class="icon icon-sm" aria-hidden="true"></i>
+      INICIAR SIMULADO AGORA
     </a>
 
     <!-- Conquistas recentes -->
     <section class="conquistas-section">
       <div class="section-header">
         <h2>Conquistas Recentes</h2>
-        <a href="perfil.html" class="text-green">3 desbloqueadas</a>
+        <a href="perfil.html" class="text-green inline-icon-row">
+          <i data-lucide="award" class="icon icon-sm" aria-hidden="true"></i>
+          3 desbloqueadas
+        </a>
       </div>
       <div class="conquistas-grid">
         <div class="conquista-card">
-          <span class="conquista-emoji">⭐</span>
+          <i data-lucide="star" class="icon conquista-icon" aria-hidden="true"></i>
           <span class="conquista-nome">Primeira</span>
           <span class="conquista-desc">Primeira simulado concluído</span>
         </div>
         <div class="conquista-card">
-          <span class="conquista-emoji">🔥</span>
+          <i data-lucide="flame" class="icon conquista-icon icon-flame" aria-hidden="true"></i>
           <span class="conquista-nome">Sequência de</span>
           <span class="conquista-desc">5 dias seguidos estudando</span>
         </div>
         <div class="conquista-card">
-          <span class="conquista-emoji">👑</span>
+          <i data-lucide="crown" class="icon conquista-icon icon-crown" aria-hidden="true"></i>
           <span class="conquista-nome">Mestre do D15</span>
           <span class="conquista-desc">Dominou o descritor D15</span>
         </div>
@@ -99,8 +102,14 @@
     <section class="mapa-section">
       <h2>Mapa de Habilidades</h2>
       <div class="mapa-toggle">
-        <button class="toggle-tab active" id="tab-lp">Língua Portuguesa</button>
-        <button class="toggle-tab" id="tab-mat">Matemática</button>
+        <button type="button" class="toggle-tab active" id="tab-lp">
+          <i data-lucide="book-open" class="icon icon-sm" aria-hidden="true"></i>
+          Língua Portuguesa
+        </button>
+        <button type="button" class="toggle-tab" id="tab-mat">
+          <i data-lucide="calculator" class="icon icon-sm" aria-hidden="true"></i>
+          Matemática
+        </button>
       </div>
       <div class="descritores-grid" id="descritores-container">
         <!-- Preenchido pelo JS -->

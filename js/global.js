@@ -9,6 +9,8 @@ function initLucideIcons() {
   }
 }
 
+window.initLucideIcons = initLucideIcons;
+
 document.addEventListener('DOMContentLoaded', () => {
   initLucideIcons();
 

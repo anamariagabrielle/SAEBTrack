@@ -51,18 +51,29 @@ const statusLabel = {
   "nao-avaliado": "Não avaliado",
 };
 
+const statusIcon = {
+  dominado: "circle-check",
+  desenvolvimento: "circle-dot",
+  critico: "alert-circle",
+  "nao-avaliado": "circle-dashed",
+};
+
 function renderDescritores(lista) {
   const container = document.getElementById("descritores-container");
   container.innerHTML = lista.map(d => `
     <div class="descritor-card ${d.status}">
       <div class="descritor-header">
         <span class="descritor-codigo">${d.codigo}</span>
-        <span class="descritor-dot ${d.status}"></span>
+        <i data-lucide="${statusIcon[d.status]}" class="icon icon-xs descritor-status-icon ${d.status}" aria-hidden="true"></i>
       </div>
       <p class="descritor-nome">${d.nome}</p>
       <span class="descritor-status ${d.status}">${statusLabel[d.status]}</span>
     </div>
   `).join("");
+
+  if (typeof window.initLucideIcons === "function") {
+    window.initLucideIcons();
+  }
 }
 
 document.getElementById("tab-lp").addEventListener("click", () => {
