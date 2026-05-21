@@ -140,3 +140,28 @@
 .btn-proxima:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  .simulado-topbar {
+    padding: 12px 16px;
+  }
+
+  .progress-bar {
+    margin: 0 16px;
+  }
+
+  .simulado-container {
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .enunciado-card {
+    padding: 16px;
+  }
+
+  .btn-proxima {
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+  }
+}

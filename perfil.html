@@ -8,51 +8,65 @@
   <link rel="stylesheet" href="css/perfil.css">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" data-navbar>
     <a href="dashboard.html" class="navbar-logo">
       <img src="images/logo.png" alt="SAEBTrack" class="logo-img">
     </a>
-    <ul class="navbar-menu">
-      <li>
-        <a href="dashboard.html">
-          <i data-lucide="layout-dashboard" class="icon icon-sm" aria-hidden="true"></i>
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="simulado.html">
-          <i data-lucide="play-circle" class="icon icon-sm" aria-hidden="true"></i>
-          Simulado
-        </a>
-      </li>
-      <li>
-        <a href="ranking.html">
-          <i data-lucide="trophy" class="icon icon-sm" aria-hidden="true"></i>
-          Ranking
-        </a>
-      </li>
-      <li>
-        <a href="perfil.html" class="active">
-          <i data-lucide="user" class="icon icon-sm" aria-hidden="true"></i>
-          Perfil
-        </a>
-      </li>
-    </ul>
-    <div class="navbar-user">
+    <button type="button" class="navbar-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-panel">
+      <i data-lucide="menu" class="icon icon-md navbar-icon-menu" aria-hidden="true"></i>
+      <i data-lucide="x" class="icon icon-md navbar-icon-close" aria-hidden="true"></i>
+    </button>
+    <div class="navbar-panel" id="navbar-panel">
+      <div class="navbar-panel-user">
+        <div class="avatar" aria-hidden="true">GS</div>
+        <div class="navbar-user-info">
+          <div class="navbar-user-name">Gisely Sales</div>
+          <div class="navbar-user-meta">3A</div>
+        </div>
+      </div>
+      <ul class="navbar-menu">
+        <li>
+          <a href="dashboard.html">
+            <i data-lucide="layout-dashboard" class="icon icon-sm" aria-hidden="true"></i>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="simulado.html">
+            <i data-lucide="play-circle" class="icon icon-sm" aria-hidden="true"></i>
+            Simulado
+          </a>
+        </li>
+        <li>
+          <a href="ranking.html">
+            <i data-lucide="trophy" class="icon icon-sm" aria-hidden="true"></i>
+            Ranking
+          </a>
+        </li>
+        <li>
+          <a href="perfil.html" class="active">
+            <i data-lucide="user" class="icon icon-sm" aria-hidden="true"></i>
+            Perfil
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-user navbar-user-desktop">
       <div class="navbar-user-info">
-        <div class="navbar-user-name">Kaio Henrique</div>
+        <div class="navbar-user-name">Gisely Sales</div>
         <div class="navbar-user-meta">3A</div>
       </div>
-      <div class="avatar">KH</div>
+      <div class="avatar" aria-hidden="true">GS</div>
     </div>
+    <div class="navbar-backdrop" aria-hidden="true"></div>
   </nav>
 
   <main class="page-container">
 
     <div class="perfil-card">
-      <div class="avatar-grande azul">KH</div>
+      <div class="avatar-grande azul">GS</div>
       <div class="perfil-info">
-        <h1 class="perfil-nome">Kaio Henrique</h1>
+        <h1 class="perfil-nome">Gisely Sales</h1>
         <p class="perfil-escola">E.E. Raimundo Nonato</p>
         <div class="perfil-badges">
           <span class="badge-turma">3º Ano A - 3A</span>

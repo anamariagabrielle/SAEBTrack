@@ -324,12 +324,26 @@
 }
 
 @media (max-width: 768px) {
+  .painel-header h1 {
+    font-size: 22px;
+  }
+
   .metricas-professor {
     grid-template-columns: 1fr;
   }
 
   .alertas-grid {
     grid-template-columns: 1fr;
+  }
+
+  .alerta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-revisar {
+    width: 100%;
+    text-align: center;
   }
 
   .painel-controles {
@@ -340,5 +354,10 @@
   .btn-importar,
   .btn-exportar {
     width: 100%;
+  }
+
+  .legenda {
+    flex-direction: column;
+    gap: 12px;
   }
 }

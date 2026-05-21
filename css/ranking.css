@@ -222,3 +222,26 @@
   font-weight: 700;
   color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  .ranking-title {
+    font-size: 24px;
+  }
+
+  .ranking-title-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .podio {
+    gap: 8px;
+  }
+
+  .podio-item {
+    padding: 12px 8px;
+  }
+
+  .ranking-item {
+    padding: 12px;
+  }
+}

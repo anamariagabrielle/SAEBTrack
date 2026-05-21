@@ -204,3 +204,19 @@
   color: var(--text-secondary);
   font-size: 12px;
 }
+
+@media (max-width: 768px) {
+  .perfil-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .conquistas-grid-perfil {
+    grid-template-columns: 1fr;
+  }
+}
