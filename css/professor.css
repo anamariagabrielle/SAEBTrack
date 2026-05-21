@@ -1,0 +1,344 @@
+/* Navbar professor */
+.navbar-professor .navbar-menu-professor a {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px;
+  border-radius: var(--border-radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+
+.btn-logout:hover {
+  color: var(--text-primary);
+  background: var(--bg-card-hover);
+}
+
+/* Toggle LP / Matemática */
+.mapa-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.toggle-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.toggle-tab.active {
+  background: var(--color-yellow);
+  color: #0b0f1a;
+}
+
+.painel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.painel-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.painel-controles {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.turma-select {
+  background: var(--bg-card);
+  border: 1px solid #2a3a4a;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-importar {
+  background: transparent;
+  border: 1px solid var(--color-yellow);
+  color: var(--color-yellow);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-exportar {
+  background: var(--color-yellow);
+  border: none;
+  color: #0b0f1a;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.metricas-professor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metrica-prof {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.metrica-label-prof {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.metrica-valor-prof {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.metrica-valor-prof.vermelho {
+  color: var(--color-red);
+}
+
+.metrica-valor-prof.amarelo {
+  color: var(--color-yellow);
+}
+
+.metrica-desc {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.metrica-icone-prof {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.4;
+  color: var(--text-secondary);
+}
+
+.alertas-section {
+  margin-bottom: 32px;
+}
+
+.section-title-alertas {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-red);
+}
+
+.section-title-alertas .icon {
+  color: var(--color-red);
+}
+
+.alertas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.alerta-card {
+  background: #2a0f0f;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.alerta-info {
+  flex: 1;
+}
+
+.alerta-desc-code {
+  color: var(--color-red);
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.alerta-nome {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.alerta-sub {
+  color: var(--color-red);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.btn-revisar {
+  background: transparent;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.matriz-section {
+  margin-bottom: 32px;
+}
+
+.matriz-section > h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.matriz-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.matriz-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+}
+
+.matriz-tabela th,
+.matriz-tabela td {
+  padding: 10px 12px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.matriz-tabela th {
+  color: var(--text-secondary);
+  font-weight: 700;
+  border-bottom: 1px solid #1a2035;
+  background: #0f1520;
+}
+
+.matriz-tabela th.col-aluno {
+  text-align: left;
+  min-width: 140px;
+}
+
+.matriz-tabela td.col-aluno {
+  text-align: left;
+  font-weight: 600;
+  color: white;
+}
+
+.matriz-tabela th.critico {
+  color: var(--color-red);
+}
+
+.matriz-tabela tr:hover td {
+  background: #1a2035;
+}
+
+.bolinha {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bolinha.dominado {
+  background: var(--color-green);
+}
+
+.bolinha.desenvolvimento {
+  background: var(--color-yellow);
+}
+
+.bolinha.critico {
+  background: var(--color-red);
+}
+
+.bolinha.nao-avaliado {
+  background: var(--color-gray);
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.legenda > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .metricas-professor {
+    grid-template-columns: 1fr;
+  }
+
+  .alertas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .painel-controles {
+    width: 100%;
+  }
+
+  .turma-select,
+  .btn-importar,
+  .btn-exportar {
+    width: 100%;
+  }
+}

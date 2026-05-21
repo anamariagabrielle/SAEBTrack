@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Professor — SAEBTrack</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/professor.css">
+</head>
+<body>
+  <nav class="navbar navbar-professor">
+    <a href="painel-professor.html" class="navbar-logo">
+      <img src="images/logo.png" alt="SAEBTrack" class="logo-img">
+    </a>
+    <ul class="navbar-menu navbar-menu-professor">
+      <li>
+        <a href="painel-professor.html" class="active teacher-active">
+          <i data-lucide="layout-grid" class="icon icon-sm" aria-hidden="true"></i>
+          Painel de Turmas
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i data-lucide="file-text" class="icon icon-sm" aria-hidden="true"></i>
+          Banco de Questões
+        </a>
+      </li>
+    </ul>
+    <div class="navbar-user">
+      <div class="navbar-user-info">
+        <div class="navbar-user-name">Andressa Caroline</div>
+        <div class="navbar-user-meta">Língua Portuguesa</div>
+      </div>
+      <a href="login.html?perfil=professor" class="btn-logout" aria-label="Sair">
+        <i data-lucide="log-out" class="icon icon-sm" aria-hidden="true"></i>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-container">
+
+    <div class="painel-header">
+      <h1>Visão Geral da Turma</h1>
+      <div class="painel-controles">
+        <select class="turma-select" aria-label="Selecionar turma">
+          <option>Turma 3º Ano A</option>
+        </select>
+        <button type="button" class="btn-importar btn-with-icon">
+          <i data-lucide="upload" class="icon icon-sm" aria-hidden="true"></i>
+          Importar Mobieduca.me
+        </button>
+        <button type="button" class="btn-exportar btn-with-icon">
+          <i data-lucide="download" class="icon icon-sm" aria-hidden="true"></i>
+          Exportar PDF
+        </button>
+      </div>
+    </div>
+
+    <div class="metricas-professor">
+      <div class="metrica-prof">
+        <p class="metrica-label-prof">ALUNOS ATIVOS</p>
+        <p class="metrica-valor-prof">5</p>
+        <p class="metrica-desc">Nesta turma</p>
+        <i data-lucide="users" class="icon metrica-icone-prof" aria-hidden="true"></i>
+      </div>
+      <div class="metrica-prof critico">
+        <p class="metrica-label-prof">DESCRITORES CRÍTICOS</p>
+        <p class="metrica-valor-prof vermelho">4</p>
+        <p class="metrica-desc">Exigem intervenção imediata</p>
+        <i data-lucide="triangle-alert" class="icon metrica-icone-prof" aria-hidden="true"></i>
+      </div>
+      <div class="metrica-prof">
+        <p class="metrica-label-prof">MÉDIA DE ENGAJAMENTO</p>
+        <p class="metrica-valor-prof amarelo">559 XP</p>
+        <p class="metrica-desc">Por aluno na semana</p>
+        <i data-lucide="trending-up" class="icon metrica-icone-prof" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="alertas-section">
+      <h2 class="section-title-alertas">
+        <i data-lucide="triangle-alert" class="icon icon-sm" aria-hidden="true"></i>
+        Alertas Pedagógicos
+      </h2>
+      <div class="alertas-grid">
+        <div class="alerta-card">
+          <div class="alerta-info">
+            <span class="alerta-desc-code">D03</span>
+            <span class="alerta-nome">Inferir informação implícita</span>
+            <p class="alerta-sub">2 alunos em nível crítico</p>
+          </div>
+          <button type="button" class="btn-revisar">Revisar</button>
+        </div>
+        <div class="alerta-card">
+          <div class="alerta-info">
+            <span class="alerta-desc-code">D07</span>
+            <span class="alerta-nome">Identificar gênero textual</span>
+            <p class="alerta-sub">2 alunos em nível crítico</p>
+          </div>
+          <button type="button" class="btn-revisar">Revisar</button>
+        </div>
+        <div class="alerta-card">
+          <div class="alerta-info">
+            <span class="alerta-desc-code">D12</span>
+            <span class="alerta-nome">Identificar conectivos</span>
+            <p class="alerta-sub">2 alunos em nível crítico</p>
+          </div>
+          <button type="button" class="btn-revisar">Revisar</button>
+        </div>
+        <div class="alerta-card">
+          <div class="alerta-info">
+            <span class="alerta-desc-code">D16</span>
+            <span class="alerta-nome">Analisar funções da linguagem</span>
+            <p class="alerta-sub">2 alunos em nível crítico</p>
+          </div>
+          <button type="button" class="btn-revisar">Revisar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="matriz-section">
+      <h2>Matriz de Habilidades</h2>
+      <div class="mapa-toggle">
+        <button type="button" class="toggle-tab active" id="tab-lp">
+          <i data-lucide="book-open" class="icon icon-sm" aria-hidden="true"></i>
+          Língua Portuguesa
+        </button>
+        <button type="button" class="toggle-tab" id="tab-mat">
+          <i data-lucide="calculator" class="icon icon-sm" aria-hidden="true"></i>
+          Matemática
+        </button>
+      </div>
+      <div class="matriz-wrapper">
+        <table class="matriz-tabela" id="matriz-tabela">
+          <!-- preenchido por professor.js -->
+        </table>
+      </div>
+      <div class="legenda">
+        <span><span class="bolinha dominado" aria-hidden="true"></span> Dominado</span>
+        <span><span class="bolinha desenvolvimento" aria-hidden="true"></span> Em Desenvolvimento</span>
+        <span><span class="bolinha critico" aria-hidden="true"></span> Dificuldade Crítica</span>
+        <span><span class="bolinha nao-avaliado" aria-hidden="true"></span> Não Avaliado</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/professor.js"></script>
+</body>
+</html>
