@@ -1,0 +1,292 @@
+.banco-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.banco-header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(61, 220, 132, 0.15);
+  color: var(--color-green);
+  flex-shrink: 0;
+}
+
+.banco-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.banco-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.nova-questao-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.nova-questao-sub {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.form-questao {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label,
+.alternativas-form legend {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.alternativas-form {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alternativas-form legend {
+  margin-bottom: 2px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.alternativa-form-row .alt-input {
+  width: 100%;
+  background: #0b1120;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.alternativa-form-row .alt-input::placeholder {
+  color: var(--color-gray);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238892a4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.alternativa-form-row .alt-input:focus {
+  outline: 2px solid var(--color-green);
+}
+
+.alternativa-form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alt-radio-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.alt-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.alt-letra {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #1a2035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s;
+}
+
+.alt-radio:checked + .alt-letra {
+  background: var(--color-green);
+  color: #0b0f1a;
+}
+
+.alternativa-form-row .alt-input {
+  flex: 1;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.alternativa-form-row.selecionada .alt-input {
+  border-color: var(--color-green);
+}
+
+.btn-salvar {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.questoes-cadastradas-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.questoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.questao-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 20px 24px;
+}
+
+.questao-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.badge-disciplina {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.badge-disciplina.lp {
+  background: #2563eb;
+}
+
+.badge-disciplina.mat {
+  background: var(--color-purple);
+}
+
+.badge-descritor {
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.badge-dificuldade {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-yellow);
+  background: rgba(245, 166, 35, 0.12);
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.questao-enunciado {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.questao-opcoes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.questao-opcao {
+  background: #0b1120;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-sm);
+  padding: 12px 14px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.questao-opcao.correta {
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+
+.questao-opcao-letra {
+  font-weight: 800;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.questao-opcao.correta .questao-opcao-letra {
+  color: var(--color-green);
+}
+
+@media (max-width: 1024px) {
+  .banco-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .questao-opcoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
