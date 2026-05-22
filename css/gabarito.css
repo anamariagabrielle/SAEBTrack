@@ -1,0 +1,215 @@
+.desempenho-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.desempenho-barra-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-green);
+}
+
+.desempenho-titulo {
+  color: var(--color-green);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.placar {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.placar-numero {
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--color-yellow);
+  line-height: 1;
+}
+
+.placar-total {
+  font-size: 32px;
+  color: var(--text-secondary);
+}
+
+.placar-label {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.metricas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.metrica-card {
+  background: #0b1120;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.metrica-card.destaque {
+  background: #0d2a1a;
+}
+
+.metrica-icone-lucide {
+  width: 24px;
+  height: 24px;
+  color: var(--text-secondary);
+}
+
+.metrica-card.destaque .metrica-icone-lucide {
+  color: var(--color-green);
+}
+
+.metrica-valor {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-green);
+}
+
+.metrica-label {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.nivel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a1030;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: var(--color-purple);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.revisao-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.revisao-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.revisao-item {
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.revisao-icone {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2a0d0d;
+  border: 2px solid var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-red);
+  flex-shrink: 0;
+}
+
+.revisao-icone .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.revisao-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.revisao-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.revisao-nome {
+  font-weight: 700;
+}
+
+.revisao-desc-badge {
+  background: #0d2a1a;
+  color: var(--color-green);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.revisao-trecho {
+  color: var(--text-secondary);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 600px;
+}
+
+.gabarito-acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.gabarito-btn {
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gabarito-acoes .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .placar-numero {
+    font-size: 56px;
+  }
+
+  .metricas-grid,
+  .gabarito-acoes {
+    grid-template-columns: 1fr;
+  }
+
+  .revisao-trecho {
+    max-width: 100%;
+  }
+}
