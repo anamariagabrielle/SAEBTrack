@@ -80,7 +80,8 @@ http://localhost:8080/index.html
 
 4. **Atalhos de teste**
    - Aluno: `index.html` → Sou Aluno → Login (qualquer e-mail/senha) → `dashboard.html`
-   - Professor: `index.html` → Sou Professor → Login → `banco-questoes.html` ou `painel-professor.html`
+   - Professor: `index.html` → Sou Professor → Login → `painel-professor.html` (matriz da disciplina do professor)
+   - Professor de Matemática (teste): `login.html?perfil=professor&disciplina=mat`
    - Simulado completo: Dashboard → Iniciar simulado → ao terminar, redireciona para `gabarito.html`
 
 > Coloque o arquivo `images/logo.png` na pasta `images/` se ainda não existir no seu ambiente (referenciado em todas as navbars).
@@ -94,8 +95,8 @@ flowchart TD
   index[index.html] --> loginAluno[login.html?perfil=aluno]
   index --> loginProf[login.html?perfil=professor]
   loginAluno --> dashboard[dashboard.html]
-  loginProf --> banco[banco-questoes.html]
   loginProf --> painel[painel-professor.html]
+  painel --> banco[banco-questoes.html]
   dashboard --> simulado[simulado.html]
   simulado --> gabarito[gabarito.html]
   gabarito --> simulado

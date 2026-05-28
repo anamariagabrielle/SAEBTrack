@@ -11,6 +11,43 @@ function initLucideIcons() {
 
 window.initLucideIcons = initLucideIcons;
 
+const PROFESSOR_DISCIPLINA_LABELS = {
+  lp: 'Língua Portuguesa',
+  mat: 'Matemática',
+};
+
+function getProfessorDisciplina() {
+  const params = new URLSearchParams(window.location.search);
+  const fromUrl = params.get('disciplina');
+  if (fromUrl === 'lp' || fromUrl === 'mat') {
+    sessionStorage.setItem('professorDisciplina', fromUrl);
+    return fromUrl;
+  }
+  return sessionStorage.getItem('professorDisciplina') === 'mat' ? 'mat' : 'lp';
+}
+
+function applyProfessorDisciplinaUI() {
+  const nav = document.querySelector('.navbar-professor');
+  if (!nav) return getProfessorDisciplina();
+
+  const disciplina = getProfessorDisciplina();
+  const label = PROFESSOR_DISCIPLINA_LABELS[disciplina];
+
+  nav.querySelectorAll('.navbar-user-meta').forEach((el) => {
+    el.textContent = label;
+  });
+
+  const matrizTitulo = document.getElementById('matriz-disciplina-titulo');
+  if (matrizTitulo) {
+    matrizTitulo.textContent = `Matriz de Habilidades — ${label}`;
+  }
+
+  return disciplina;
+}
+
+window.getProfessorDisciplina = getProfessorDisciplina;
+window.applyProfessorDisciplinaUI = applyProfessorDisciplinaUI;
+
 function initNavbarMobile() {
   const MOBILE_BREAKPOINT = 768;
 
@@ -63,6 +100,10 @@ function initNavbarMobile() {
 document.addEventListener('DOMContentLoaded', () => {
   initLucideIcons();
   initNavbarMobile();
+
+  if (document.querySelector('.navbar-professor')) {
+    applyProfessorDisciplinaUI();
+  }
 
   document.querySelectorAll('form[data-prevent-default]').forEach((form) => {
     form.addEventListener('submit', (e) => e.preventDefault());

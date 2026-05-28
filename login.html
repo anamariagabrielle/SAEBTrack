@@ -82,7 +82,13 @@
       document.getElementById('login-form').addEventListener('submit', function (e) {
         e.preventDefault();
         if (isProfessor) {
-          window.location.href = 'banco-questoes.html';
+          const disciplina = params.get('disciplina');
+          if (disciplina === 'lp' || disciplina === 'mat') {
+            sessionStorage.setItem('professorDisciplina', disciplina);
+          } else if (!sessionStorage.getItem('professorDisciplina')) {
+            sessionStorage.setItem('professorDisciplina', 'lp');
+          }
+          window.location.href = 'painel-professor.html';
         } else {
           window.location.href = 'dashboard.html';
         }

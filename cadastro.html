@@ -107,6 +107,55 @@
         </div>
       </div>
 
+      <div id="campos-professor" hidden>
+        <div class="form-group">
+          <label class="form-label" for="escola-prof">Escola</label>
+          <div class="form-input-wrapper">
+            <i data-lucide="school" class="icon icon-sm input-icon" aria-hidden="true"></i>
+            <input
+              type="text"
+              id="escola-prof"
+              name="escola-prof"
+              value="E.E. Raimundo Nonato"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="disciplina-prof">Disciplina</label>
+          <div class="form-input-wrapper">
+            <i data-lucide="book-open" class="icon icon-sm input-icon" aria-hidden="true"></i>
+            <select id="disciplina-prof" name="disciplina-prof">
+              <option value="lp" selected>Língua Portuguesa</option>
+              <option value="mat">Matemática</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="serie-prof">Série que leciona</label>
+            <div class="form-input-wrapper">
+              <i data-lucide="layers" class="icon icon-sm input-icon" aria-hidden="true"></i>
+              <select id="serie-prof" name="serie-prof">
+                <option value="1">1º Ano</option>
+                <option value="2">2º Ano</option>
+                <option value="3" selected>3º Ano</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="turma-prof">Turma</label>
+            <div class="form-input-wrapper">
+              <i data-lucide="users" class="icon icon-sm input-icon" aria-hidden="true"></i>
+              <select id="turma-prof" name="turma-prof">
+                <option value="3A" selected>3A</option>
+                <option value="3B">3B</option>
+                <option value="3C">3C</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <button type="submit" class="btn-primary btn-with-icon">
         Criar conta
         <i data-lucide="user-plus" class="icon icon-sm" aria-hidden="true"></i>
@@ -125,13 +174,25 @@
       const btnAluno = document.getElementById('btn-aluno');
       const btnProfessor = document.getElementById('btn-professor');
       const camposAluno = document.getElementById('campos-aluno');
+      const camposProfessor = document.getElementById('campos-professor');
+      const escolaAluno = document.getElementById('escola');
+      const escolaProf = document.getElementById('escola-prof');
+      const disciplinaProf = document.getElementById('disciplina-prof');
+      const turmaProf = document.getElementById('turma-prof');
 
       function setPerfil(isAluno) {
         btnAluno.classList.toggle('active', isAluno);
         btnProfessor.classList.toggle('active', !isAluno);
         btnAluno.querySelector('.toggle-dot').classList.toggle('active', isAluno);
         btnProfessor.querySelector('.toggle-dot').classList.toggle('active', !isAluno);
-        camposAluno.style.display = isAluno ? 'block' : 'none';
+
+        camposAluno.hidden = !isAluno;
+        camposProfessor.hidden = isAluno;
+
+        escolaAluno.required = isAluno;
+        escolaProf.required = !isAluno;
+        disciplinaProf.required = !isAluno;
+        turmaProf.required = !isAluno;
       }
 
       btnAluno.addEventListener('click', () => setPerfil(true));
@@ -139,8 +200,35 @@
 
       document.getElementById('cadastro-form').addEventListener('submit', function (e) {
         e.preventDefault();
-        window.location.href = 'dashboard.html';
+
+        const senha = document.getElementById('senha').value;
+        const confirmar = document.getElementById('confirmar-senha').value;
+        if (senha !== confirmar) {
+          alert('As senhas não coincidem.');
+          return;
+        }
+
+        const isProfessor = btnProfessor.classList.contains('active');
+
+        if (isProfessor) {
+          sessionStorage.setItem('professorDisciplina', disciplinaProf.value);
+          const serieProf = document.getElementById('serie-prof').value;
+          sessionStorage.setItem(
+            'professorTurma',
+            `Turma ${serieProf}º Ano ${turmaProf.value}`
+          );
+          sessionStorage.setItem('professorEscola', escolaProf.value.trim());
+          sessionStorage.setItem(
+            'professorNome',
+            document.getElementById('nome').value.trim()
+          );
+          window.location.href = 'painel-professor.html';
+        } else {
+          window.location.href = 'dashboard.html';
+        }
       });
+
+      setPerfil(true);
     })();
   </script>
 </body>

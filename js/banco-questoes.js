@@ -104,3 +104,9 @@ document.getElementById('form-questao').addEventListener('submit', (e) => {
 
 atualizarSelecaoAlternativa();
 renderQuestoes();
+
+(function aplicarDisciplinaProfessorNoForm() {
+  const select = document.getElementById('disciplina');
+  if (!select || typeof window.getProfessorDisciplina !== 'function') return;
+  select.value = window.getProfessorDisciplina() === 'mat' ? 'MAT' : 'LP';
+})();
