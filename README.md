@@ -4,10 +4,13 @@ Plataforma web para preparação ao **SAEB** (Sistema de Avaliação da Educaç�
 
 > **Status:** protótipo front-end estático (HTML, CSS e JavaScript vanilla). Não há backend, autenticação real nem persistência de dados — os fluxos simulam o comportamento da aplicação final.
 
+**Acesse a plataforma:** [https://anamariagabrielle.github.io/SAEBTrack/](https://anamariagabrielle.github.io/SAEBTrack/)
+
 ---
 
 ## Sumário
 
+- [Demonstração online](#demonstração-online)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias](#tecnologias)
 - [Como executar](#como-executar)
@@ -16,6 +19,16 @@ Plataforma web para preparação ao **SAEB** (Sistema de Avaliação da Educaç�
 - [Identidade visual](#identidade-visual)
 - [Ícones](#ícones)
 - [Licença](#licença)
+
+---
+
+## Demonstração online
+
+A plataforma está hospedada no **GitHub Pages**:
+
+**[https://anamariagabrielle.github.io/SAEBTrack/](https://anamariagabrielle.github.io/SAEBTrack/)**
+
+Pela URL acima você acessa a tela inicial (`index.html`) sem instalar dependências. Para desenvolvimento local, use a seção [Como executar](#como-executar).
 
 ---
 
@@ -55,6 +68,12 @@ Não há bundler, npm nem dependências locais obrigatórias além de um servido
 ---
 
 ## Como executar
+
+### Online (GitHub Pages)
+
+Abra no navegador: **[https://anamariagabrielle.github.io/SAEBTrack/](https://anamariagabrielle.github.io/SAEBTrack/)**
+
+### Localmente
 
 1. Clone o repositório e entre na pasta do projeto:
 
